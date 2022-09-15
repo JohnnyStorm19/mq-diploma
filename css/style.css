@@ -33,9 +33,9 @@ html {
 .header {
     background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
     position: relative;
-    width: 100%;
+    max-width: 100%;
     background-color: #000000;
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     z-index: 0;
@@ -52,7 +52,7 @@ html {
     background-color: #000000;
     opacity: 0.60;
     z-index: -1;
-    width: 100%;
+    max-width: 100%;
 }
 
 .container {
@@ -72,13 +72,13 @@ html {
 svg {
     width: 60%;
     height: auto;
-    margin-top: 36px;
+    padding-top: 36px;
 }
 
 .menu {
     font-size: 13px;
     text-transform: uppercase;
-    margin-top: 36px;
+    padding-top: 36px;
 }
 
 .menu__button {
@@ -89,10 +89,7 @@ svg {
     display: flex;
     list-style-type: none;
     color: #ffffff;
-}
-
-.menu-list-item {
-    margin-left: 35px;
+    padding-left: 0;
 }
 
 .item-link {
@@ -106,6 +103,13 @@ svg {
     text-decoration-thickness: 2px;
 }
 
+.intro-wrapper {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 140px;
+}
+
 .intro {
     font-weight: bold;
     font-size: 45px;
@@ -113,10 +117,6 @@ svg {
     text-align: center;
     line-height: 1.6;
     text-transform: uppercase;
-    width: 700px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 140px;
 }
 
 /* СЕЙЧАС В ТРЕНДЕ */
@@ -174,7 +174,7 @@ svg {
 .trend-card:nth-child(n+1) {
     position: relative;
     background-color: #000000;
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     z-index: 0;
@@ -182,18 +182,22 @@ svg {
 
 .trend-card:nth-child(1) {
     background-image: url("../images/trend1.jpg");
+    background-size: cover;
 }
 
 .trend-card:nth-child(2) {
     background-image: url("../images/trend2.jpg");
+    background-size: cover;
 }
 
 .trend-card:nth-child(3) {
     background-image: url("../images/trend3.jpg");
+    background-size: cover;
 }
 
 .trend-card:nth-child(4) {
     background-image: url("../images/trend4.jpg");
+    background-size: cover;
 }
 
 .trend-card:nth-child(n+1)::after {
@@ -209,17 +213,19 @@ svg {
     width: 100%;
 }
 
-.trend-card:nth-child(1) h3 {
-    padding-right: 25px;
+.trend-card-title {
+    margin-bottom: 35px;
+    margin-top: 13px;
 }
 
-.trend-card-title {
+.trend-card-title-link {
     font-weight: bold;
     color: #ffffff;
     line-height: 24px;
     font-size: 20px;
     text-transform: uppercase;
     text-align: left;
+    text-decoration: none;
 }
 
 
@@ -241,15 +247,11 @@ svg {
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: no-wrap;
-    width: 778px;
+    max-width: 778px;
 }
 
 .post {
     display: flex;
-    width: 793px;
 }
 
 .image-title {
@@ -262,10 +264,7 @@ svg {
 }
 
 .post-info {
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
-    width: 367px;
 }
 
 .post-header {
@@ -310,7 +309,7 @@ svg {
 }
 
 .post-description {
-    font-weight: regular;
+    font-weight: normal;
     font-size: 15px;
     line-height: 1.4;
 }
@@ -333,8 +332,11 @@ p {
 }
 
 .tag {
-    margin: 0 10px 0 0;
     color: #b59f5b;
+}
+
+.tag:first-child {
+    margin-right: 10px;
 }
 
 .tag-link {
@@ -354,18 +356,12 @@ p {
 /* ASIDE ASIDE ASIDE */
 
 .aside {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: no-wrap;
     margin-left: 120px;
     box-sizing: border-box;
     width: 272px;
 }
 
 .new-posts {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: no-wrap;
     box-sizing: border-box;
 }
 
@@ -390,7 +386,7 @@ p {
 
 .new-post {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     box-sizing: border-box;
 }
 
@@ -401,6 +397,10 @@ p {
 .new-post-header-title {
     text-transform: uppercase;
     margin-top: 8px;
+}
+
+.new-post-header .time {
+    margin-right: 0;
 }
 
 .new-post:nth-child(n+3) {
@@ -444,17 +444,12 @@ p {
     outline: none;
 }
 
-.newsletter {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: no-wrap;
-}
-
 .field-email {
     background-color: #f4f7f6;
     width: 272px;
     height: 47px;
     padding-left: 20px;
+    padding-right: 20px;
     border: none;
     box-sizing: border-box;
     font-size: 13px;
@@ -519,8 +514,6 @@ p {
 }
 
 .topic-aside-items {
-    display: flex;
-    flex-wrap: no-wrap;
     list-style-type: none;
     flex-direction: column;
     padding: 0;
@@ -534,7 +527,7 @@ p {
     margin-top: 23px;
 }
 
-.topic-aside-item::after {
+.topic-aside-item {
     content: "";
     display: block;
     border-bottom: 1px solid #eeeeee;
@@ -566,20 +559,14 @@ p {
 .our-works-wrapper {
     margin-top: 64px;
     margin-bottom: 84px;
-    display: flex;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     max-width: 1200px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     box-sizing: border-box;
 }
 
-.work-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .our-works-title::after {
     content: "";
@@ -590,8 +577,32 @@ p {
     margin: 0 auto;
 }
 
+.our-works-cards-wrapper {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 65px;
+}
+
+.work-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.work-card-info-left, .work-card-info-center, .work-card-info-right {
+    width: 297px;
+    padding: 10px 0;
+    outline: 3px solid #b59f5b97;
+    outline-offset: 20px;
+    flex-grow: 1;
+}
+
 .work-card-about {
-    font-weight: regular;
+    font-weight: normal;
     font-size: 15px;
     line-height: 22px;
 }
@@ -625,52 +636,6 @@ p {
     display: block;
 }
 
-.our-works-cards-wrapper {
-    display: flex;
-    box-sizing: border-box;
-    margin-top: 28px;
-}
-
-.work-card-info-left {
-    border: 3px solid #b59f5b95;
-    padding: 33px 15px 5px 15px;
-    margin: -20px -20px 0 -20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.work-card-info-center {
-    border: 3px solid #b59f5b95;
-    padding: 33px 15px 28px 15px;
-    margin: -20px -20px 0 -20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.work-card-info-right {
-    border: 3px solid #b59f5b95;
-    padding: 33px 15px 5px 15px;
-    margin: -20px -20px 0 -20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.work-card:nth-child(2) {
-    margin-left: 113px;
-    margin-right: 113px;
-}
 
 .our-works-title {
     font-size: 20px;
@@ -701,52 +666,55 @@ p {
 /* ФУТЕР */
 
 .footer {
-    width: 1170px;
+    display: flex;
+    justify-content: center;
+    max-width: 1170px;
     padding: 30px 0;
     margin: 0 auto;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     background-color: #f4f7f6;
+
 }
 
 .footer-icons {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .footer-icon-link-dribbble {
     display: block;
     background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     width: 20px;
     height: 20px;
-    margin-right: 30px;
 }
 
 .footer-icon-link-pinterest {
     display: block;
     background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     width: 20px;
     height: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 
 .footer-icon-link-tumblr {
     display: block;
     background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     width: 20px;
     height: 20px;
-    margin-left: 30px;
 }
 
 .copyright {
@@ -778,19 +746,181 @@ p {
     overflow: hidden;
 }
 
-/* БУРГЕР *//* БУРГЕР *//* БУРГЕР *//* БУРГЕР *//* БУРГЕР *//* БУРГЕР *//* БУРГЕР *//* БУРГЕР *//* БУРГЕР */
-
-@media (min-width: 641px) {
-    .menu__button {
-        display: none;
-    }
+.popup-wrapper {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
 }
 
-@media (max-width: 640px) {
-    .menu-list {
-        display: none;
-    }
+.popup-container {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
 }
+
+.popup-content {
+    background-color: #ffffff;
+    max-width: 391px;
+    box-sizing: border-box;
+    padding: 51px 30px;
+}
+
+.popup-title {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.popup-title::after {
+    content: "";
+    display: block;
+    width: 67px;
+    border-bottom: 3px solid #e1d9bd;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.popup-item-title {
+    font-weight: normal;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 120px;
+    left: 940px;
+}
+
+.close:before,
+.close:after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    background: gray;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.select-container,
+.radio-container,
+.feedback-writing-container {
+    margin-bottom: 25px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: block;
+    border: none;
+    background-image: url("../svg/form-arrows.svg");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: right 10px center;
+}
+
+select:focus {
+    outline: 1px solid #b59f5b;
+}
+
+.popup-select {
+    width: 100%;
+    padding: 18px;
+    background-color: #f4f7f6;
+    font-weight: normal;
+    font-size: 13px;
+    color: #0000005d;
+}
+
+input#subscribeChoice2 {
+    margin-left: 10px;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="radio"] {
+    background-image: url("../svg/form-empty-circle.svg");
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+}
+
+input[type="radio"]:checked {
+    background-image: url("../svg/form-circle.svg");
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+}
+
+input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 22px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #b59f5b;
+}
+
+.feedback-field {
+    font-weight: normal;
+    font-size: 13px;
+    color: #0000005d;
+    background-color: #f4f7f6;
+    margin-bottom: 26px;
+}
+
+.button-submit {
+    width: 100%;
+    height: 47px;
+    border: none;
+    background-color: #b59f5b;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.button-submit:hover {
+    background-color: #323232;
+}
+
+
+
+/* БУРГЕР */
+/* БУРГЕР */
+/* БУРГЕР */
+/* БУРГЕР */
+/* БУРГЕР */
+/* БУРГЕР */
+/* БУРГЕР */
+/* БУРГЕР */
+/* БУРГЕР */
 
 .menu__button {
     width: 1.4em;
@@ -803,6 +933,7 @@ p {
     position: relative;
     text-indent: -9999px;
     cursor: pointer;
+    display: block;
 }
 
 .menu__button:before,
@@ -837,6 +968,19 @@ p {
     position: absolute;
     left: 0;
     top: 50%;
+}
+
+@media (max-width: 1199px) {
+
+    .menu-list {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu__button {
+        display: none;
+    }
 }
 
 @media (min-width: 641px) {
@@ -904,9 +1048,28 @@ p {
     }
 }
 
-/* АДАПТИВ ПЛАНШЕТ *//* АДАПТИВ ПЛАНШЕТ *//* АДАПТИВ ПЛАНШЕТ *//* АДАПТИВ ПЛАНШЕТ *//* АДАПТИВ ПЛАНШЕТ *//* АДАПТИВ ПЛАНШЕТ */
+/* АДАПТИВ ПЛАНШЕТ */
+/* АДАПТИВ ПЛАНШЕТ */
+/* АДАПТИВ ПЛАНШЕТ */
+/* АДАПТИВ ПЛАНШЕТ */
+/* АДАПТИВ ПЛАНШЕТ */
+/* АДАПТИВ ПЛАНШЕТ */
 
 @media (min-width: 641px) and (max-width: 1199px) {
+
+    .header {
+        background-image: url("../images/banner-bg-tablet.jpg");
+        background-size: cover;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .intro {
+        font-size: 40px;
+        line-height: 55px;
+    }
 
     .cards-wrapper {
         flex-wrap: wrap;
@@ -925,64 +1088,123 @@ p {
     }
 
     .content {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: no-wrap;
         width: 367px;
     }
-    
+
     .post {
         display: flex;
         width: 367px;
         flex-direction: column;
     }
-    
+
     .image-title {
         height: 312px;
     }
-    
+
     .post-info {
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
         width: 367px;
-    }    
+    }
 
     .aside {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: no-wrap;
         box-sizing: border-box;
         margin-left: 35px;
     }
 
-    .our-works-wrapper {
+    .our-works-cards-wrapper {
+        justify-content: flex-start;    
+        gap: 65px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        background-image: url("../images/banner-mobile.jpg");
+        background-size: cover;
+    }
+
+    .container {
+        max-width: 100%;
+        position: relative;
+    }
+
+    svg {
+        width: 270px;
+        height: auto;
+        margin: auto;
+        margin-top: 237px;
+        margin-bottom: 42px;
+        position: absolute;
+        padding: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .intro {
+        font-size: 26px;
+        line-height: 36px;
+
+    }
+
+    .intro-wrapper {
+        margin-top: 329px;
+        margin-bottom: 204px;
+    }
+
+    .cards-wrapper {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .trend-card {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .trend-card-wrapper {
         width: 100%;
     }
 
-    .our-works-cards-wrapper {
-        flex-wrap: wrap;
-        flex: 1 1 auto;
+    .trend-card-title-link {
+        line-height: 20px;
+        font-size: 16px;
     }
 
-    .work-card {
-        margin-top: 30px;
+    .wrapper {
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .work-card:nth-child(2) {
-        margin-left: 64px;
-        margin-right: 64px;
+    .content {
+        max-width: 100%;
     }
 
-    .work-card-info-left {
-        width: 336px;
+    .post {
+        flex-direction: column;
     }
 
-    .work-card-info-center {
-        width: 336px;
+    .post .image {
+        width: 100%;
     }
 
-    .work-card-info-right {
-        width: 336px;
+    .aside {
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
+
+    .field,
+    .field-email,
+    .button-subscribe {
+        width: 100%;
+    }
+
 }

@@ -40,6 +40,7 @@ html {
     background-position: center center;
     z-index: 0;
     padding-bottom: 147px;
+    padding-top: 36px;
 }
 
 .header::after {
@@ -72,13 +73,11 @@ html {
 svg {
     width: 60%;
     height: auto;
-    padding-top: 36px;
 }
 
 .menu {
     font-size: 13px;
     text-transform: uppercase;
-    padding-top: 36px;
 }
 
 .menu__button {
@@ -90,6 +89,7 @@ svg {
     list-style-type: none;
     color: #ffffff;
     padding-left: 0;
+    margin: 0;
 }
 
 .item-link {
@@ -155,6 +155,7 @@ svg {
     padding-top: 37px;
     padding-left: 30px;
     padding-right: 43px;
+    padding-bottom: 35px;
     margin: 0 auto;
 }
 
@@ -214,8 +215,8 @@ svg {
 }
 
 .trend-card-title {
-    margin-bottom: 35px;
     margin-top: 13px;
+    margin-bottom: 0;
 }
 
 .trend-card-title-link {
@@ -226,6 +227,10 @@ svg {
     text-transform: uppercase;
     text-align: left;
     text-decoration: none;
+}
+
+.trend-card-title-link:hover {
+    color: #b59f5b;
 }
 
 
@@ -335,8 +340,12 @@ p {
     color: #b59f5b;
 }
 
-.tag:first-child {
+.tag {
     margin-right: 10px;
+}
+
+.tag:last-child {
+    margin-right: 0;
 }
 
 .tag-link {
@@ -397,6 +406,7 @@ p {
 .new-post-header-title {
     text-transform: uppercase;
     margin-top: 8px;
+    margin-bottom: 0;
 }
 
 .new-post-header .time {
@@ -411,6 +421,10 @@ p {
     display: flex;
     margin-top: 60px;
     margin-bottom: 60px;
+}
+
+.form-row label {
+    width: 100%;
 }
 
 .button {
@@ -430,7 +444,7 @@ p {
 
 .field {
     background-color: #f4f7f6;
-    width: 224px;
+    width: 100%;
     height: 47px;
     padding-left: 20px;
     padding-right: 20px;
@@ -446,7 +460,7 @@ p {
 
 .field-email {
     background-color: #f4f7f6;
-    width: 272px;
+    width: 100%;
     height: 47px;
     padding-left: 20px;
     padding-right: 20px;
@@ -461,7 +475,7 @@ p {
 }
 
 .button-subscribe {
-    width: 272px;
+    width: 100%;
     height: 47px;
     border: none;
     background-color: #b59f5b;
@@ -558,7 +572,7 @@ p {
 
 .our-works-wrapper {
     margin-top: 64px;
-    margin-bottom: 84px;
+    margin-bottom: 64px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -581,23 +595,21 @@ p {
     margin-top: 28px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 65px;
 }
 
+
 .work-card {
-    width: 300px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    justify-content: space-between;
+    align-items: center;
 }
 
-.work-card-info-left, .work-card-info-center, .work-card-info-right {
-    width: 297px;
-    padding: 10px 0;
+.work-card-info {
+    padding: 30px 20px 20px;
     outline: 3px solid #b59f5b97;
-    outline-offset: 20px;
+    margin-top: -20px;
     flex-grow: 1;
 }
 
@@ -636,7 +648,6 @@ p {
     display: block;
 }
 
-
 .our-works-title {
     font-size: 20px;
     text-align: center;
@@ -659,6 +670,10 @@ p {
     text-transform: uppercase;
     color: #ffffff;
     cursor: pointer;
+}
+
+.button-go-to-shop:hover {
+    background-color: #323232;
 }
 
 /* ФУТЕР */
@@ -692,6 +707,7 @@ p {
     background-position: center center;
     width: 20px;
     height: 20px;
+    margin-right: 25px;
 }
 
 .footer-icon-link-pinterest {
@@ -702,7 +718,6 @@ p {
     background-position: center center;
     width: 20px;
     height: 20px;
-    margin-left: 25px;
     margin-right: 25px;
 }
 
@@ -769,6 +784,7 @@ p {
     max-width: 391px;
     box-sizing: border-box;
     padding: 51px 30px;
+    margin-top: 10px;
 }
 
 .popup-title {
@@ -798,25 +814,11 @@ p {
 .close {
     cursor: pointer;
     position: absolute;
+    width: 20px;
+    height: 20px;
     top: 120px;
     left: 940px;
-}
-
-.close:before,
-.close:after {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 4px;
-    background: gray;
-}
-
-.close:before {
-    transform: rotate(45deg);
-}
-
-.close:after {
-    transform: rotate(-45deg);
+    background-image: url("../svg/form-x.svg");
 }
 
 .select-container,
@@ -888,11 +890,21 @@ input[type="text"]:focus {
 }
 
 .feedback-field {
+    min-height: 130px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 23px 17px;
+    box-sizing: border-box;
     font-weight: normal;
     font-size: 13px;
-    color: #0000005d;
+    border: none;
+    color: #000000;
     background-color: #f4f7f6;
     margin-bottom: 26px;
+}
+
+.feedback-field:focus {
+    outline: 1px solid #b59f5b;
 }
 
 .button-submit {
@@ -1080,20 +1092,15 @@ input[type="text"]:focus {
     }
 
     .wrapper {
-        width: 100%;
+        max-width: 100%;
         padding-left: 25px;
         padding-right: 35px;
         box-sizing: border-box;
-        justify-content: center;
-    }
-
-    .content {
-        width: 367px;
+        justify-content: space-around;
     }
 
     .post {
         display: flex;
-        width: 367px;
         flex-direction: column;
     }
 
@@ -1104,8 +1111,7 @@ input[type="text"]:focus {
     .post-info {
         display: flex;
         flex-direction: column;
-        box-sizing: border-box;
-        width: 367px;
+        max-width: 390px;
     }
 
     .aside {
@@ -1113,13 +1119,37 @@ input[type="text"]:focus {
         margin-left: 35px;
     }
 
-    .our-works-cards-wrapper {
-        justify-content: flex-start;    
-        gap: 65px;
+    .our-works-wrapper {
+        margin-bottom: 50px;
     }
-}
+
+    .our-works-cards-wrapper {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .work-card {
+        width: 40%;
+        min-width: 335px;
+        margin-bottom: 30px;
+    }
+
+    .work-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .work-card-info:first-child {
+        margin-right: 10px;
+    }
+
+    .footer-wrapper {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}    
 
 @media (max-width: 640px) {
+
     .header {
         background-image: url("../images/banner-mobile.jpg");
         background-size: cover;
@@ -1158,6 +1188,7 @@ input[type="text"]:focus {
     .cards-wrapper {
         flex-wrap: wrap;
         max-width: 100%;
+        margin-bottom: 44px;
     }
 
     .trend-card {
@@ -1176,15 +1207,15 @@ input[type="text"]:focus {
     }
 
     .wrapper {
-        margin: 0 auto;
         padding-left: 15px;
         padding-right: 15px;
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
     .content {
-        max-width: 100%;
+        margin-bottom: 44px;
     }
 
     .post {
@@ -1201,10 +1232,28 @@ input[type="text"]:focus {
         width: 100%;
     }
 
-    .field,
-    .field-email,
-    .button-subscribe {
+    .field {
         width: 100%;
     }
 
+    .our-works-wrapper {
+        margin-bottom: 42px;
+    }
+
+    .our-works-cards-wrapper {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .work-card {
+        min-width: 330px;
+        margin-bottom: 30px;
+    }
+
+    .footer-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
+
+/* посмотреть нижний отступ блоков. проверить ширину в процентах */

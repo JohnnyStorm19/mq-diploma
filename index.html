@@ -283,24 +283,24 @@
                                 распущенных волос</a></h5>
                     </div>
                 </div>
-                <label>
-                    <form class="form-row">
+                <form class="form-row">
+                    <label>
                         <span class="visually-hidden">Поиск постов</span>
                         <input type="search" class="field" placeholder="Найти..." required>
-                        <button class="button" type="submit"><span class="visually-hidden">Кнопка поиска</span></button>
-                    </form>
-                </label>
+                    </label>
+                    <button class="button" type="submit"><span class="visually-hidden">Кнопка поиска</span></button>
+                </form>
             </section>
 
             <section class="newsletter">
                 <h5 class="section-title">Рассылка</h5>
-                <label>
-                    <form class="form-row-newsletter">
+                <form class="form-row-newsletter">
+                    <label>
                         <span class="visually-hidden">Введите Ваш email-адрес</span>
                         <input type="search" class="field-email" placeholder="Ваш email-адрес" required>
-                        <button class="button-subscribe" type="button">Подписаться</button>
-                    </form>
-                </label>
+                    </label>    
+                    <button class="button-subscribe" type="button">Подписаться</button>
+                </form>
             </section>
 
             <section class="tags-aside">
@@ -350,7 +350,7 @@
                         <source media="(min-width: 1200px)" srcset="images\shop-item-desk1.jpg">
                         <img src="images\shop-item-desk1.jpg" alt="Подушки на диван">
                     </picture>
-                    <div class="work-card-info-left">
+                    <div class="work-card-info">
                         <div class="work-card-info-container">
                             <h3 class="work-card-title">Подушки на диван</h3>
                             <p class="work-card-about">Набор из двух подушек с модными принтами. Видео о создании <a
@@ -375,7 +375,7 @@
                         <source media="(min-width: 1200px)" srcset="images\shop-item-desk2.jpg">
                         <img src="images\shop-item-desk2.jpg" alt="Подушки на диван">
                     </picture>
-                    <div class="work-card-info-center">
+                    <div class="work-card-info">
                         <div class="work-card-info-container">
                             <h3 class="work-card-title">Кукла «Зайчик»</h3>
                             <p class="work-card-about">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a
@@ -400,7 +400,7 @@
                         <source media="(min-width: 1200px)" srcset="images\shop-item-desk3.jpg">
                         <img src="images\shop-item-desk3.jpg" alt="Подушки на диван">
                     </picture>
-                    <div class="work-card-info-right">
+                    <div class="work-card-info">
                         <div class="work-card-info-container">
                             <h3 class="work-card-title">Шестиугольная рамка</h3>
                             <p class="work-card-about">Необычная рамка для украшения дома из видео <a href="#0"
@@ -423,33 +423,40 @@
     </div>
 
     <!-- ФУТЕР -->
-    <footer class="footer">
-        <ul class="footer-icons">
-            <li class="footer-icon-dribbble">
-                <a href="twitter" class="footer-icon-link-dribbble">
-                    <span class="visually-hidden">Профиль компании в Dribbble</span>
-                </a>
-            </li>
-            <li class="footer-icon-pinterest">
-                <a href="pinterest" class="footer-icon-link-pinterest">
-                    <span class="visually-hidden">Профиль компании в Pinterest</span>
-                </a>
-            </li>
-            <li class="footer-icon-tumblr">
-                <a href="#0" class="footer-icon-link-tumblr">
-                    <span class="visually-hidden">Профиль компании в Tumblr</span>
-                </a>
-            </li>
-        </ul>
-    </footer>
-    <footer class="copyright">
-        <span class="copyright-text"><a href="#0" class="copyright-text-link">Copyright © 2009–2019 City Blog
-                LLC.</a></span>
-    </footer>
+    <div class="footer-wrapper">
+        <footer class="footer">
+            <ul class="footer-icons">
+                <li class="footer-icon-dribbble">
+                    <a href="twitter" class="footer-icon-link-dribbble">
+                        <span class="visually-hidden">Профиль компании в Dribbble</span>
+                    </a>
+                </li>
+                <li class="footer-icon-pinterest">
+                    <a href="pinterest" class="footer-icon-link-pinterest">
+                        <span class="visually-hidden">Профиль компании в Pinterest</span>
+                    </a>
+                </li>
+                <li class="footer-icon-tumblr">
+                    <a href="#0" class="footer-icon-link-tumblr">
+                        <span class="visually-hidden">Профиль компании в Tumblr</span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <footer class="copyright">
+            <span class="copyright-text"><a href="#0" class="copyright-text-link">Copyright © 2009–2019 City Blog
+                    LLC.</a></span>
+        </footer>
+    </div>    
+
+    <!-- ПОПАП -->    <!-- ПОПАП -->    <!-- ПОПАП -->    <!-- ПОПАП -->
+
     <div class="popup-wrapper">
         <div class="popup-container">
             <form class="popup-content">
-                <div class="close"></div>
+                <div class="close">
+                    <span class="visually-hidden">Закрыть всплывающее окно</span>
+                </div>
                 <h3 class="popup-title">Ваш фидбек</h3>
                 <div class="select-container">
                     <label for="select">
@@ -475,7 +482,7 @@
                 <div class="feedback-writing-container">
                     <label>
                         <span class="popup-item-title">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-                        <input type="text" class="feedback-field" placeholder="Может, больше рецептов?"></input>
+                        <textarea class="feedback-field" placeholder="Может, больше рецептов?"></textarea>
                     </label>    
                     <button class="button-submit" type="button">Отправить</button>
                 </div>

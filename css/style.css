@@ -129,6 +129,7 @@ svg {
 
 .cards-wrapper {
     display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
 }
 
@@ -160,7 +161,7 @@ svg {
 }
 
 .trend-card {
-    width: 25%;
+    width: 24.8%;
     height: 319px;
     box-sizing: border-box;
     padding-bottom: 14px;
@@ -170,6 +171,10 @@ svg {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+}
+
+.trend-card:last-child {
+    margin-right: 0;
 }
 
 .trend-card:nth-child(n+1) {
@@ -602,7 +607,6 @@ p {
     width: 30%;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
     align-items: center;
 }
 
@@ -611,6 +615,7 @@ p {
     outline: 3px solid #b59f5b97;
     margin-top: -20px;
     flex-grow: 1;
+    box-sizing: border-box;
 }
 
 .work-card-about {
@@ -1088,7 +1093,11 @@ input[type="text"]:focus {
     }
 
     .trend-card {
-        width: 50%;
+        width: 49.8%;
+    }
+
+    .trend-card:nth-child(1), .trend-card:nth-child(2) {
+        margin-bottom: 4px;
     }
 
     .wrapper {
@@ -1106,6 +1115,7 @@ input[type="text"]:focus {
 
     .image-title {
         height: 312px;
+        margin-right: 0;
     }
 
     .post-info {
@@ -1129,8 +1139,7 @@ input[type="text"]:focus {
     }
 
     .work-card {
-        width: 40%;
-        min-width: 335px;
+        width: 48%;
         margin-bottom: 30px;
     }
 
@@ -1188,13 +1197,19 @@ input[type="text"]:focus {
     .cards-wrapper {
         flex-wrap: wrap;
         max-width: 100%;
-        margin-bottom: 44px;
+        margin-bottom: 2.75rem;
     }
 
     .trend-card {
         width: 100%;
         padding-right: 15px;
         padding-left: 15px;
+        margin-bottom: 3px;
+        margin-right: 0;
+    }
+
+    .trend-card:last-child {
+        margin-bottom: 0;
     }
 
     .trend-card-wrapper {
@@ -1203,7 +1218,7 @@ input[type="text"]:focus {
 
     .trend-card-title-link {
         line-height: 20px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .wrapper {
@@ -1212,18 +1227,40 @@ input[type="text"]:focus {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-top: 44px;
+        margin-bottom: 44px;
     }
 
     .content {
-        margin-bottom: 44px;
+        margin-bottom: 2.75rem;
     }
 
     .post {
         flex-direction: column;
     }
 
+    .post:nth-child(n+1) {
+        margin-top: 37px;
+    }
+
+    .post::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 4px solid #eeeeeeab;
+    }
+
     .post .image {
         width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .post-info p {
+        margin-bottom: 24px;
+    }
+
+    .image-title {
+        margin-right: 0;
     }
 
     .aside {
@@ -1246,8 +1283,12 @@ input[type="text"]:focus {
     }
 
     .work-card {
-        min-width: 330px;
+        width: 100%;
         margin-bottom: 30px;
+    }
+
+    .work-card:last-child {
+        margin-bottom: 0;
     }
 
     .footer-wrapper {
